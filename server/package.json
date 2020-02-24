@@ -1,6 +1,7 @@
 {
   "name": "puissance4",
   "version": "1.0.0",
+  "type": "module",
   "description": "un jeu de puissance 4",
   "main": "global.js",
   "scripts": {
@@ -17,9 +18,14 @@
   },
   "homepage": "https://gitlab.com/lucasrelmy/puissance-4-en-reseaux#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ws": "^7.2.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.2"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
   }
 }
