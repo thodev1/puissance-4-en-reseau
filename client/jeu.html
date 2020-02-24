@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPJV4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <main>
+        <!-- Modal des règles -->
+        <div class="modal fade" id="regleModal" tabindex="-1" role="dialog" aria-labelledby="regleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="regleModalLabel">Règle du puissance 4</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Pour gagner une partie de puissance 4, il suffit d'être le premier joueur à aligner
+                            4 jetons de sa couleur horizontalement, verticalement ou diagonalement.
+                            Si lors d'une partie, tous les jetons sont joués sans qu'aucun joueur ne gagne, la
+                            partie est déclarée nulle.
+                            <br>
+                            Le joueur qui commence est déterminé aléatoirement. Si une partie à déjà eu lieu, c'est
+                            le perdant qui jouera en premier.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center text-white haut mb-3">
+            <img class="logo float-left mr-n5" src="images/logo.png"  alt="logo du jeu upjv4" data-toggle="modal" data-target="#ConnexionModal">
+            <h1 class="display-3 mx-auto">UPJV4</h1>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="container text-white text-center">
+                    <h4>Billy l'enfant</h4>
+                    <h5>14 jetons restants</h5>
+                </div>
+            </div>
+            <div class="col-4 img-fluid mx-auto d-block">
+                <img class="logo float-left mr-n5" src="images/plateau.png"  alt="plateau de jeu">
+            </div>
+            <div class="col-4">
+                <div class="container text-white text-center">
+                    <h4>Calamité Jeanne</h4>
+                    <h5>14 jetons restants</h5>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid mx-auto text-center text-white p-2 mt-4 fixed-bottom">
+        <p>Mention légale</p>
+    </footer>
+</body>
+</html>

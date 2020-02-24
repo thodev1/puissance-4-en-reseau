@@ -1,1 +1,172 @@
-Hello word
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>UPJV4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+<!-- Modal de connexion -->
+<div class="modal fade" id="ConnexionModal" tabindex="-1" role="dialog" aria-labelledby="ConnexionModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="ConnexionModalLabel">Pseudonyme :</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group text-center">
+                        <input type="text" class="form-control" id="pseudoInput" placeholder="Entrez votre pseudonyme ici" minlength="1" maxlength="20">
+                        <button type="submit" class="btn btn-primary px-4 m-4">Jouer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal de création de salon -->
+<div class="modal fade" id="SalonModal" tabindex="-1" role="dialog" aria-labelledby="SalonModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="SalonModalLabel">Nom du salon :</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group text-center">
+                        <input type="text" class="form-control" id="salonInput" placeholder="Entrez le nom du salon ici">
+                        <button type="submit" class="btn btn-primary px-4 m-4">Créer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal des règles -->
+<div class="modal fade" id="regleModal" tabindex="-1" role="dialog" aria-labelledby="regleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="regleModalLabel">Règle du puissance 4</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Pour gagner une partie de puissance 4, il suffit d'être le premier joueur à aligner
+                4 jetons de sa couleur horizontalement, verticalement ou diagonalement.
+                Si lors d'une partie, tous les jetons sont joués sans qu'aucun joueur ne gagne, la
+                partie est déclarée nulle.
+                <br>
+                Le joueur qui commence est déterminé aléatoirement. Si une partie à déjà eu lieu, c'est
+                    le perdant qui jouera en premier.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <main>
+        <div class="container-fluid text-center text-white haut mb-3">
+            <img class="logo float-left mr-n5" src="images/logo.png"  alt="logo du jeu upjv4" data-toggle="modal" data-target="#RegleModal">
+            <h1 class="display-3 mx-auto">UPJV4</h1>
+        </div>
+        <div class="container text-white">
+            <div class="row mb-4">
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de David Gemell</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de Pierre Boterro</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de H.P Lovecraft</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de Mary Higgins Clark</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de Anne Robillard</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de Jonathan Stroud</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de Andrzej Sapkowski</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card partie">
+                        <div class="card-body">
+                            <h3 class="card-title text-center ml-n1">Partie de R. L. Stine</h3>
+                        </div>
+                        <p class="nbjoueur text-right mr-3">1/2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary btn-lg  mx-auto boutonSalon center" data-toggle="modal" data-target="#SalonModal">Créer un salon</button>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid mx-auto text-center text-white p-2 mt-4 fixed-bottom">
+        <p>Mention légale</p>
+    </footer>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#ConnexionModal').modal('show');
+    });
+</script>
