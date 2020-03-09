@@ -36,6 +36,18 @@ body {
     max-width: 6em;
 }
 
+.divimage .aide{
+    visibility: hidden;
+    max-height: 14em;
+    max-width: 14em;
+}
+
+.divimage:hover .aide{
+    visibility: visible;
+}
+
+
+
 .nbjoueur{
     font-size: 1.75em;
 }
@@ -44,4 +56,27 @@ footer {
     height: 50px;
     width: 100%;
     background-color: #1A535C;
+}
+
+.modal-content{
+    background-color: #247BA0;
+    font-family : Tahoma;
+    color : #FFFFFF;
+    border-style: solid;
+    border-color: #1A535C;
+    border-width:0.25em;
+
+}
+.boutonmodal{
+    background-color: #1A535C;
+    border-color: #1A535C;
+}
+.boutonmodal:hover {
+    transition-duration: 0.4s;
+    background-color: #2FA4D6;
+    border-color: #1A535C;
+}
+
+.modal-title{
+    font-family:  Trebuchet MS;
 }

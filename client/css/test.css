@@ -1,0 +1,31 @@
+/* Slick slider */
+.sliderParent {
+    background-color: #e2e2e2;
+    padding: 400px ;
+}
+
+/* Custom cursor */
+
+.parent {
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+}
+
+.follower {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-color: red;
+    left: 0;
+    z-index: 3;
+    top: 0;
+    pointer-events: none; /* Very important to prevent the follower from messing up with the mouse move */
+    transition: opacity .2s ease-in-out;
+}
+
+.follower > * {
+    margin: auto;
+}
