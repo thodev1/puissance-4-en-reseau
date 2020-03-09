@@ -1,4 +1,7 @@
-import {ConnectionMessageEvent} from "./incoming/ConnectionMessageEvent.js";
+import {AuthentificationPseudoMessageEvent} from "./incoming/AuthentificationPseudoMessageEvent";
+import {AddSalonMessageEvent} from "./incoming/AddSalonMessageEvent";
+import {JointSalonMessageEvent} from "./incoming/JointSalonMessageEvent";
+import {QuitSalonMessageEvent} from "./incoming/QuitSalonMessageEvent";
 
 export class MessageManager {
 
@@ -9,14 +12,22 @@ export class MessageManager {
     }
 
     loadIncoming() {
-        this.connectionMessageEvent = 1;
-        this.incoming[this.connectionMessageEvent] = new ConnectionMessageEvent();
+        this.incoming[1] = new AuthentificationPseudoMessageEvent();
+        this.incoming[2] = new AddSalonMessageEvent();
+        this.incoming[3] = new JointSalonMessageEvent();
+        this.incoming[4] = new QuitSalonMessageEvent();
     }
 
     loadOutgoing() {
-       // MessageManager.connectionMessageComposer = 1;
-        MessageManager.connectionOkMessageComposer = 2;
-        MessageManager.connectionErreurMessageComposer = 3;
+        MessageManager.authentificationPseudoOkMessageComposer = 1;
+        MessageManager.authentificationPseudoErreurMessageComposer = 2;
+        MessageManager.addSalonOkMessageComposer = 3;
+        MessageManager.addSalonErreurMessageComposer = 4;
+        MessageManager.listSalonMessageComposer = 5;
+        MessageManager.jointSalonMessageComposer = 6;
+        MessageManager.alertMessageComposer = 7;
+        MessageManager.updateJoueurMessageComposer = 8;
+        MessageManager.quitSalonMessageComposer = 9;
     }
 
     receiveIncoming(joueur, msg) {
@@ -28,6 +39,9 @@ export class MessageManager {
             if(this.incoming.hasOwnProperty(id)) {
                 let incoming = this.incoming[id];
                 incoming.message(joueur, msg);
+
+                console.log("reçu paquet [" + id + "]");
+
             } else {
                 console.log("oups le paquet " + id + " existe pas");
             }
