@@ -16,16 +16,13 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h5 class="modal-title" id="ConnexionModalLabel">Pseudonyme :</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <h5 class="modal-title" id="ConnexionModalLabel">Pseudonyme :</h5>
+        </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group text-center">
                         <input type="text" class="form-control" id="pseudoInput" placeholder="Entrez votre pseudonyme ici" minlength="1" maxlength="20">
-                        <button type="submit" class="btn btn-primary px-4 m-4">Jouer</button>
+                        <button type="submit" class="btn btn-primary px-4 m-4 boutonmodal">Jouer</button>
                     </div>
                 </form>
             </div>
@@ -46,7 +43,7 @@
                 <form>
                     <div class="form-group text-center">
                         <input type="text" class="form-control" id="salonInput" placeholder="Entrez le nom du salon ici">
-                        <button type="submit" class="btn btn-primary px-4 m-4">Créer</button>
+                        <button type="submit" class="btn btn-primary px-4 m-4 boutonmodal">Créer</button>
                     </div>
                 </form>
             </div>
@@ -74,16 +71,22 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-secondary boutonmodal" data-dismiss="modal">Fermer</button>
             </div>
         </div>
     </div>
 </div>
     <main>
-        <div class="container-fluid text-center text-white haut mb-3">
-            <img class="logo float-left mr-n5" src="images/logo.png"  alt="logo du jeu upjv4" data-toggle="modal" data-target="#RegleModal">
-            <h1 class="display-3 mx-auto">UPJV4</h1>
+        <div class="container-fluid haut mb-3">
+            <div class="container text-center text-white divimage" data-toggle="tooltip">
+                <img class="logo float-left mr-n5 ml-n5" src="images/logo.png"  alt="logo du jeu upjv4" data-toggle="modal"  data-target="#regleModal">
+                <img class="float-left mr-n5 ml-3 mt-4 aide" src="images/aide.png" >
+            </div>
+            <div class="container text-center text-white ml-n5">
+                <h1 class="display-3 mx-auto ml-n5">UPJV4</h1>
+            </div>
         </div>
+
         <div class="container text-white">
             <div class="row mb-4">
                 <div class="col-3">
@@ -168,6 +171,14 @@
 <script type="text/javascript">
     $(window).on('load',function(){
         $('#ConnexionModal').modal('show');
+    });
+</script>
+
+<script>
+    $('$( ".contaide" )[data-toggle="tooltip"]').tooltip({
+        animated: 'fade',
+        placement: 'right',
+        html: true
     });
 </script>
 
