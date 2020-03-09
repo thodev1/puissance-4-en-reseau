@@ -1,28 +1,20 @@
-import {MessageManager} from "../ws/MessageManager";
-import {WebsocketManager} from "../ws/WebsocketManager";
-
-
 export class Joueur {
 
     constructor(ws) {
         this.ws = ws;
         this.id = this.ws.id;
         this.pseudo = null;
-    }
-
-    test() {
-
-        for (let key in WebsocketManager.ws.joueurs) {
-
-            if(WebsocketManager.ws.joueurs.hasOwnProperty(key)) {
-                WebsocketManager.ws.joueurs[key].send(MessageManager.connectionMessageComposer, {msg:"hello"});
-            }
-        }
+        this.salon = null;
+        this.remove = false;
     }
 
     send(id, msg) {
-        msg["id"] = id;
-        let json = JSON.stringify(msg);
-        this.ws.send(json);
+
+        //si le joueur n'est pas en train d'être supprimé alors on peut continuer à lui envoyer des msg
+        if(!this.remove) {
+            msg["id"] = id;
+            let json = JSON.stringify(msg);
+            this.ws.send(json);
+        }
     }
 }

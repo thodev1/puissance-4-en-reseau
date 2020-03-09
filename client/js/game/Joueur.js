@@ -5,8 +5,7 @@ export class Joueur {
     constructor(ws) {
         this.ws = ws;
         this.pseudo = null;
-
-      // this.send(MessageManager.connectionMessageComposer, {msg:"mdr lol"});
+        this.salon = false; //si joueur est dans un salon
     }
 
     send(id, msg) {

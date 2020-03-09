@@ -1,5 +1,13 @@
-import {ConnectionMessageEvent} from "./incoming/ConnectionMessageEvent";
+import {AuthentificationPseudoOkMessageEvent} from "./incoming/AuthentificationPseudoOkMessageEvent";
+import {AuthentificationPseudoErreurMessageEvent} from "./incoming/AuthentificationPseudoErreurMessageEvent";
 import {Global} from "../global";
+import {AddSalonOkMessageEvent} from "./incoming/AddSalonOkMessageEvent";
+import {AddSalonErreurMessageEvent} from "./incoming/AddSalonErreurMessageEvent";
+import {ListSalonMessageEvent} from "./incoming/ListSalonMessageEvent";
+import {JointSalonMessageEvent} from "./incoming/JointSalonMessageEvent";
+import {AlertMessageEvent} from "./incoming/AlertMessageEvent";
+import {UpdateJoueurMessageEvent} from "./incoming/UpdateJoueurMessageEvent";
+import {QuitSalonMessageEvent} from "./incoming/QuitSalonMessageEvent";
 
 export class MessageManager {
 
@@ -10,12 +18,22 @@ export class MessageManager {
     }
 
     loadIncoming() {
-        this.connectionMessageEvent = 1;
-        this.incoming[this.connectionMessageEvent] = new ConnectionMessageEvent();
+        this.incoming[1] = new AuthentificationPseudoOkMessageEvent();
+        this.incoming[2] = new AuthentificationPseudoErreurMessageEvent();
+        this.incoming[3] = new AddSalonOkMessageEvent();
+        this.incoming[4] = new AddSalonErreurMessageEvent();
+        this.incoming[5] = new ListSalonMessageEvent();
+        this.incoming[6] = new JointSalonMessageEvent();
+        this.incoming[7] = new AlertMessageEvent();
+        this.incoming[8] = new UpdateJoueurMessageEvent();
+        this.incoming[9] = new QuitSalonMessageEvent();
     }
 
     loadOutgoing() {
-        MessageManager.connectionMessageComposer = 1;
+        MessageManager.authentificationPseudoMessageComposer = 1;
+        MessageManager.addSalonMessageComposer = 2;
+        MessageManager.jointSalonMessageComposer = 3;
+        MessageManager.quitSalonMessageComposer = 4;
     }
 
     receiveIncoming(msg) {
@@ -27,6 +45,8 @@ export class MessageManager {
             if(this.incoming.hasOwnProperty(id)) {
                 let incoming = this.incoming[id];
                 incoming.message(Global.joueur, msg);
+                console.log("reçu paquet [" + id + "]");
+
             } else {
                 console.log("oups le paquet incoming " + id + " n'existe pas");
             }
