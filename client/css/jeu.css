@@ -44,11 +44,10 @@ footer {
 }
 
 .plateau{
-    position:relative;
-    max-height: 35em;
-    max-width: 35em;
-    width: 118%;
-    height: 118%;
+    position:absolute;
+    max-height: 28.85em;
+    max-width: 28.85em;
+
 }
 
 .divimage .aide{
