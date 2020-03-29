@@ -2,6 +2,8 @@
 /.idea/
 /server/package.json
 /server/package-lock.json
+server/package.json
+server/package-lock.json
 /test.html
 /css/test.css
 package.json
