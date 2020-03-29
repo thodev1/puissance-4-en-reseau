@@ -86,15 +86,40 @@ footer {
     cursor: none;
 }
 
-.follower {
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    pointer-events: none;
-    transition: opacity .2s ease-in-out;
-    margin: 1.5em 2em 1em;
-}
+.indicateur {
+    width: 3em;
+    height: 3em;
+    margin-bottom: 1em;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+ }
 
+.indicateur:hover{
+    opacity: 100%;
+}
+.ind1{
+    margin-left: 1.8em;
+}
+.ind2{
+     margin-left: 0.25em;
+ }
+.ind3{
+    margin-left: 0.25em;
+}
+.ind4{
+    margin-left: 0.10em;
+}
+.ind5{
+    margin-left: 0.20em;
+}
+.ind6{
+    margin-left: 0.20em;
+}
+.ind7{
+    margin-left: 0.20em;
+}
 /* animation jeton */
 /* colonne 1*/
 .a05 {
