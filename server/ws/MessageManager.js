@@ -2,6 +2,7 @@ import {AuthentificationPseudoMessageEvent} from "./incoming/AuthentificationPse
 import {AddSalonMessageEvent} from "./incoming/AddSalonMessageEvent";
 import {JointSalonMessageEvent} from "./incoming/JointSalonMessageEvent";
 import {QuitSalonMessageEvent} from "./incoming/QuitSalonMessageEvent";
+import {JoueSalonMessageEvent} from "./incoming/JoueSalonMessageEvent";
 
 export class MessageManager {
 
@@ -16,6 +17,7 @@ export class MessageManager {
         this.incoming[2] = new AddSalonMessageEvent();
         this.incoming[3] = new JointSalonMessageEvent();
         this.incoming[4] = new QuitSalonMessageEvent();
+        this.incoming[5] = new JoueSalonMessageEvent();
     }
 
     loadOutgoing() {
@@ -28,6 +30,9 @@ export class MessageManager {
         MessageManager.alertMessageComposer = 7;
         MessageManager.updateJoueurMessageComposer = 8;
         MessageManager.quitSalonMessageComposer = 9;
+        MessageManager.playJeuMessageComposer = 10;
+        MessageManager.addJetonsJeuMessageComposer = 11;
+        MessageManager.endPartieMessageComposer = 12;
     }
 
     receiveIncoming(joueur, msg) {
