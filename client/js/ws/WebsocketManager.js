@@ -31,6 +31,7 @@ export class WebsocketManager {
 
             ws.onopen = function (event) {
                 Global.joueur = new Joueur(ws);
+                Global.partie = new Partie();
 
                 //on affiche l'alerte d'authentification
                 $('#ConnexionModal').modal('show');

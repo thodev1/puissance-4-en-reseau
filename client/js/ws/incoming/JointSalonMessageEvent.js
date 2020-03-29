@@ -1,9 +1,11 @@
 import {IncomingManager} from "./IncomingManager.js";
+import {Partie} from "../../game/Partie";
+import {Global} from "../../global";
 
 export class JointSalonMessageEvent extends IncomingManager {
 
     message(joueur, msg) {
-        document.getElementById("page_accueil").style.display = "none";
-        document.getElementById("page_jeu").style.display = "";
+       Global.partie.joinPartie();
+       Global.partie.create(21, 21);
     }
 }

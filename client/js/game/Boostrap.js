@@ -79,4 +79,20 @@ export class Boostrap {
         document.getElementById("AlertModalBody").innerText = msg;
         $('#AlertModal').modal('show');
     }
+
+    static createJetons(type) {
+        let jeton = document.createElement("img");
+        jeton.classList.add("jeton");
+        jeton.src = "images/" + type + ".png";
+        jeton.alt = "un jeton";
+
+        return jeton;
+    }
+
+    static createCol(nb) {
+        let div = document.createElement("div");
+        div.classList.add("col-" + nb);
+
+        return div;
+    }
 }
