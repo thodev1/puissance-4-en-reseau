@@ -8,6 +8,9 @@ import {JointSalonMessageEvent} from "./incoming/JointSalonMessageEvent";
 import {AlertMessageEvent} from "./incoming/AlertMessageEvent";
 import {UpdateJoueurMessageEvent} from "./incoming/UpdateJoueurMessageEvent";
 import {QuitSalonMessageEvent} from "./incoming/QuitSalonMessageEvent";
+import {PlayJeuMessageEvent} from "./incoming/PlayJeuMessageEvent";
+import {AddJetonsJeuMessageEvent} from "./incoming/AddJetonsJeuMessageEvent";
+import {EndPartieMessageEvent} from "./incoming/EndPartieMessageEvent";
 
 export class MessageManager {
 
@@ -27,6 +30,9 @@ export class MessageManager {
         this.incoming[7] = new AlertMessageEvent();
         this.incoming[8] = new UpdateJoueurMessageEvent();
         this.incoming[9] = new QuitSalonMessageEvent();
+        this.incoming[10] = new PlayJeuMessageEvent();
+        this.incoming[11] = new AddJetonsJeuMessageEvent();
+        this.incoming[12] = new EndPartieMessageEvent();
     }
 
     loadOutgoing() {
@@ -34,6 +40,7 @@ export class MessageManager {
         MessageManager.addSalonMessageComposer = 2;
         MessageManager.jointSalonMessageComposer = 3;
         MessageManager.quitSalonMessageComposer = 4;
+        MessageManager.joueSalonMessageComposer = 5;
     }
 
     receiveIncoming(msg) {

@@ -22,7 +22,7 @@ export class WebsocketManager {
         }
 
         try {
-            let ws = new WebSocket("ws://localhost:8100");
+            let ws = new WebSocket("ws://upjv4.thodev.fr:8100");
 
             ws.onerror= function(msg){
                 Boostrap.createAlert("Désolés, nous n'arrivons pas à te connecter au serveur");
@@ -42,7 +42,7 @@ export class WebsocketManager {
 
                 ws.onclose = function (msg) {
                     Boostrap.createAlert("Désolés, tu viens d'être déconnecté du serveur");
-                    Partie.quitPartie();
+                    Global.partie.quitPartie();
 
                     function restartWS() {
                         self.load();

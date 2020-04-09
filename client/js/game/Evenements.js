@@ -7,6 +7,7 @@ export class Evenements {
         this.loadAuthentification();
         this.loadAddSalon();
         this.loadquitSalon();
+        this.loadJoueSalon();
     }
 
     //Event pour authentification
@@ -55,6 +56,15 @@ export class Evenements {
                 Global.joueur.send(MessageManager.quitSalonMessageComposer, {});
             }
 
+            e.preventDefault();
+        });
+    }
+
+    //Event pour jouer un jeton
+    loadJoueSalon() {
+        document.getElementById("jouePartie").addEventListener("click", function(e) {
+
+           Global.partie.joue(5);
             e.preventDefault();
         });
     }

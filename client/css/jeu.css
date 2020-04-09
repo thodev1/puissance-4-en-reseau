@@ -8,6 +8,7 @@ footer {
     width: 100%;
     background-color: #1A535C;
 }
+.name-p {font-size: 50px}
 
 .haut {
     background-color: #1A535C;
@@ -42,6 +43,8 @@ footer {
 .modal-title{
     font-family:  Trebuchet MS;
 }
+
+.indicateurs{height: 28.85em;width: 28.85em;}
 
 .plateau{
     position:absolute;
@@ -94,13 +97,15 @@ footer {
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
+    margin-left: 9px;
+    cursor: pointer;
  }
 
 .indicateur:hover{
     opacity: 100%;
 }
 .ind1{
-    margin-left: 1.8em;
+    margin-left: 0.8em;
 }
 .ind2{
      margin-left: 0.25em;

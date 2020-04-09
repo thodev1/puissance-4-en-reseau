@@ -80,6 +80,19 @@ export class Boostrap {
         $('#AlertModal').modal('show');
     }
 
+    static createIndicateur(i) {
+        let indicateur = document.createElement("img");
+        indicateur.classList.add("indicateur");
+        if(i === 0) {
+            indicateur.classList.add("ind" + (i+1));
+        }
+        indicateur.src = "images/indicateur.png";
+        indicateur.alt = "un indicateur";
+        indicateur.style.visibility = "hidden";
+
+        return indicateur;
+    }
+
     static createJetons(type) {
         let jeton = document.createElement("img");
         jeton.classList.add("jeton");

@@ -174,10 +174,13 @@ export class Partie {
         let result = false;
 
        //verification des 8 cas possibles
-        for(let i = 1; i <= 8; i++) {
+        for(let i = 1; i <= 7; i = i+2) {
 
-            let check = this.check(i, placement,position,index);
-            if(check >= 4) {
+            let check = this.check(i, placement,position,index) + this.check((i+1), placement,position,index);
+
+           // console.log("check " + i + " et " + (i+1) + " result: " + check);
+
+            if(check >= 5) {
                 result = true;
                 break;
             }
