@@ -80,11 +80,11 @@
             </div>
             <div class="modal-body">
                 <p>Pour gagner une partie de puissance 4, il suffit d'être le premier joueur à aligner
-                4 jetons de sa couleur horizontalement, verticalement ou diagonalement.
-                Si lors d'une partie, tous les jetons sont joués sans qu'aucun joueur ne gagne, la
-                partie est déclarée nulle.
-                <br>
-                Le joueur qui commence est déterminé aléatoirement. Si une partie à déjà eu lieu, c'est
+                    4 jetons de sa couleur horizontalement, verticalement ou diagonalement.
+                    Si lors d'une partie, tous les jetons sont joués sans qu'aucun joueur ne gagne, la
+                    partie est déclarée nulle.
+                    <br>
+                    Le joueur qui commence est déterminé aléatoirement. Si une partie à déjà eu lieu, c'est
                     le perdant qui jouera en premier.
                 </p>
             </div>
@@ -94,61 +94,65 @@
         </div>
     </div>
 </div>
-    <main>
-        <div class="container-fluid haut mb-3">
-            <div class="container text-center text-white divimage" data-toggle="tooltip">
-                <img class="logo float-left mr-n5 ml-n5" src="images/logo.png"  alt="logo du jeu upjv4" data-toggle="modal"  data-target="#regleModal">
-                <img class="float-left mr-n5 ml-3 mt-4 aide" src="images/aide.png" >
-            </div>
-            <div class="container text-center text-white ml-n5">
-                <h1 class="display-3 mx-auto ml-n5">UPJV4</h1>
-            </div>
+<main>
+    <div class="container-fluid haut mb-3">
+        <div class="container text-center text-white divimage" data-toggle="tooltip">
+            <img class="logo float-left mr-n5 ml-n4" src="images/logo.png"  alt="logo du jeu upjv4" data-toggle="modal"  data-target="#regleModal">
+            <img class="float-left mr-n5 ml-3 mt-4 aide" src="images/aide.png" >
         </div>
-
-        <!--page accueil -->
-        <div id="page_accueil">
-            <div id="listSalon" class="container text-white"></div>
-            <div class="text-center">
-                <button type="button" class="btn btn-primary btn-lg  mx-auto boutonSalon center" data-toggle="modal" data-target="#SalonModal">Créer un salon</button>
-            </div>
+        <div class="container text-center text-white ml-n5">
+            <h1 class="name-p mx-auto ml-n5">UPJV4</h1>
         </div>
-        <!-- fin page page accueil-->
+    </div>
 
-        <!--page jeu-->
-        <div id="page_jeu" style="display:none;">
-            <div class="row mb-4">
-                <div class="col-4">
-                    <div id="jeu_joueur1" class="container text-white text-center">
-                        <h4></h4>
-                        <h5></h5>
-                        <div class="stock ">
-                            <div id="list_jj" class="row center-text mx-auto d-flex justify-content-center"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 img-fluid mx-auto d-block">
-                    <img class="logo float-left mr-n5" src="images/plateau.png"  alt="plateau de jeu">
-                </div>
-                <div class="col-4">
-                    <div id="jeu_joueur2" class="container text-white text-center">
-                        <h4></h4>
-                        <h5></h5>
-                        <div class="stock ">
-                            <div id="list_jr" class="row center-text mx-auto d-flex justify-content-center"></div>
-                        </div>
+    <!--page accueil -->
+    <div id="page_accueil">
+        <div id="listSalon" class="container text-white"></div>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary btn-lg  mx-auto boutonSalon center" data-toggle="modal" data-target="#SalonModal">Créer un salon</button>
+        </div>
+    </div>
+    <!-- fin page page accueil-->
+
+    <!--page jeu-->
+    <div id="page_jeu" style="display:none;">
+        <div class="row" style="margin-right: 0;margin-left: 0;">
+            <div class="col-md-3 col-lg-4 d-none d-md-block my-auto">
+                <div id="jeu_joueur1" class="container text-white text-center">
+                    <h4></h4>
+                    <h5></h5>
+                    <div class="stock ">
+                        <div id="list_jj" class="row center-text mx-auto d-flex justify-content-center"></div>
                     </div>
                 </div>
             </div>
-            <div class="text-center">
-                <button id="quitPartie" type="button" class="btn btn-primary btn-lg  mx-auto center">Quitter la partie</button>
+            <div class="col-12 col-md-6 col-lg-4 pl-5 p-md-0">
+                <div class="indicateurs">
+                    <div id="plateau"></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-4 d-none d-md-block my-auto">
+                <div id="jeu_joueur2" class="container text-white text-center">
+                    <h4></h4>
+                    <h5></h5>
+                    <div class="stock ">
+                        <div id="list_jr" class="row center-text mx-auto d-flex justify-content-center"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <div class="text-center">
+                    <button id="quitPartie" type="button" class="btn btn-primary btn-lg  mx-auto center">Quitter la partie</button>
+                </div>
             </div>
         </div>
-        <!-- fin page jeu-->
-    </main>
-    <footer class="container-fluid mx-auto text-center text-white p-2 mt-4 fixed-bottom">
-        <p>Mentions légales</p>
-        <p>Hebergeur : OVH.com contact : Relmy Lucas lucasrelmy@gmail.com</p>
-    </footer>
+    </div>
+    <!-- fin page jeu-->
+</main>
+<footer class="container-fluid mx-auto text-center text-white p-2 mt-4 fixed-bottom">
+    <p>Mentions légales</p>
+    <p>Hebergeur : OVH.com contact : Relmy Lucas lucasrelmy@gmail.com</p>
+</footer>
 </body>
 </html>
 <script type="module" src="js/boot.js"></script>
