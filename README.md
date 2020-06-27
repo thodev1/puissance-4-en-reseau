@@ -1,3 +1,3 @@
-# Puissance 4 en réseaux
+# Puissance 4 en réseau
 
 Un super puissance 4 en reseau
